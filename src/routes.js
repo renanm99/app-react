@@ -16,7 +16,7 @@ const Routes = () => (
             <Route path="/app-react/products/:id" component={Product} />
 
             {/* default */}
-            <Route component={Error} />
+            <Route path="/app-react/" component={Error} />
         </Switch>
     </BrowserRouter>
 );
