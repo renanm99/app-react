@@ -10,13 +10,13 @@ const Routes = () => (
     <BrowserRouter>
         <Switch>
             <Route exact path="/" component={Main} />
-            <Route exact path="/home" component={Main} />
-            <Route exact path="/app-react" component={Main} />
-            <Route exact path="/app-react/products" component={Main} />
-            <Route exact path="/app-react/products/:id" component={Product} />
+            <Route path="/home" component={Main} />
+            <Route path="/app-react" component={Main} />
+            <Route path="/app-react/products" component={Main} />
+            <Route path="/app-react/products/:id" component={Product} />
 
             {/* default */}
-            <Route path="/app-react/" component={Error} />
+            <Route component={Error} />
         </Switch>
     </BrowserRouter>
 );
