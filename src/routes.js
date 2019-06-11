@@ -9,14 +9,16 @@ import Error from "./pages/error";
 const Routes = () => (
     <BrowserRouter>
         <Switch>
+            {/* Main */}
             <Route exact path="/" component={Main} />
             <Route exact path="/home" component={Main} />
             <Route exact path="/app-react" component={Main} />
+
+            {/* Product */}
             <Route exact path="/app-react/products" component={Product} />
             <Route exact path="/app-react/products/:id" component={Product} />
 
-            {/* default */}
-            <Route path="/app-react" component={Error} />
+            {/* Error */}
             <Route component={Error} />
         </Switch>
     </BrowserRouter>
