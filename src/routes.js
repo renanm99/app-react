@@ -19,8 +19,8 @@ const Routes = () => (
             <Route exact path="/app-react/products/:id" component={Product} />
 
             {/* Error */}
+            <Route exact path="/app-react/erro" component={Error} />
             <Route component={Error} />
-            <Route path="/app-react/erro" component={Error} />
         </Switch>
     </BrowserRouter>
 );
