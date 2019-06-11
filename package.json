@@ -2,7 +2,7 @@
     "name": "app-react",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://renanm99.github.io/app-react",
+    "homepage": "https://renanm99.github.io/app-react/",
     "dependencies": {
         "axios": "^0.19.0",
         "react": "^16.8.6",
