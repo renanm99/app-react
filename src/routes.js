@@ -1,14 +1,14 @@
 import React from "react";
 
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter, Switch, Route } from "react-router-dom";
 
 import Main from "./pages/main";
 import Product from "./pages/product";
 import Error from "./pages/error";
 
 const Routes = () => (
-    <BrowserRouter>
-        <Switch>
+    <HashRouter>
+        {/* <Switch> */}
             {/* Main */}
             <Route exact path="/" component={Main} />
             <Route exact path="/home" component={Main} />
@@ -20,8 +20,8 @@ const Routes = () => (
 
             {/* Error */}
             <Route component={Error} />
-        </Switch>
-    </BrowserRouter>
+        {/* </Switch> */}
+    </HashRouter>
 );
 
 export default Routes;
