@@ -4,7 +4,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Main from "./pages/main";
 import Product from "./pages/product";
-import Error from "./pages/error";
+import Erro from "./pages/error";
 
 const Routes = () => (
     <BrowserRouter>
@@ -19,8 +19,8 @@ const Routes = () => (
             <Route exact path="/app-react/products/:id" component={Product} />
 
             {/* Error */}
-            <Route exact path="/app-react/erro" component={Error} />
-            <Route component={Error} />
+            <Route exact path="/app-react/erro" component={Erro} />
+            <Route component={Erro} />
         </Switch>
     </BrowserRouter>
 );
