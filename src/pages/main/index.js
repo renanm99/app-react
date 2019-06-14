@@ -54,13 +54,13 @@ export default class Main extends Component {
 
     render() {
         const { products, page, productInfo, opacity } = this.state;
-        var load = 1;
+        var load = "block";
         if(opacity === 1){
-            load = 0;
+            load = "none";
         }
         return (
             <div>
-                <div className="main" style={{opacity:load}}>
+                <div className="main" style={{display: load}}>
                     <img
                         className="loadgif"
                         src="./loadgif.gif"
