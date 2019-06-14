@@ -3,5 +3,13 @@ footer#footerbar {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+footer#footerbar img {
     opacity: 0.6;
+    transition: 0.5s all;
+}
+
+footer#footerbar img:hover {
+    opacity: 1;
 }
