@@ -54,26 +54,38 @@ export default class Main extends Component {
 
     render() {
         const { products, page, productInfo, opacity } = this.state;
-
+        var load = 1;
+        if(opacity === 1){
+            load = 0;
+        }
         return (
-            <div className="product-list" style={{opacity: opacity}}>
-                {products.map(product => (
-                    <article key={product._id}>
-                        <strong>{product.title}</strong>
-                        <p>{product.description}</p>
-                        <Link to={`/products/${product._id}`}>Acessar</Link>
-                    </article>
-                ))}
-                <div className="actions">
-                    <button disabled={page === 1} onClick={this.prevPage}>
-                        Anterior
-                    </button>
-                    <button
-                        disabled={page === productInfo.page}
-                        onClick={this.nextPage}
-                    >
-                        Próxima
-                    </button>
+            <div>
+                <div className="main" style={{opacity:load}}>
+                    <img
+                        className="loadgif"
+                        src="./loadgif.gif"
+                        alt="load_gif"
+                    />
+                </div>
+                <div className="product-list" style={{ opacity: opacity }}>
+                    {products.map(product => (
+                        <article key={product._id}>
+                            <strong>{product.title}</strong>
+                            <p>{product.description}</p>
+                            <Link to={`/products/${product._id}`}>Acessar</Link>
+                        </article>
+                    ))}
+                    <div className="actions">
+                        <button disabled={page === 1} onClick={this.prevPage}>
+                            Anterior
+                        </button>
+                        <button
+                            disabled={page === productInfo.page}
+                            onClick={this.nextPage}
+                        >
+                            Próxima
+                        </button>
+                    </div>
                 </div>
             </div>
         );
