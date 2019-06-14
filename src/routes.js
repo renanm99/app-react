@@ -10,16 +10,14 @@ const Routes = () => (
     <BrowserRouter>
         <Switch>
             {/* Main */}
-            {/* <Route exact path="/" component={Main} /> */}
-            {/* <Route exact path="/home" component={Main} /> */}
-            <Route exact path="/app-react/" component={Main} />
-            <Route exact path="/app-react/products" component={Main} />
+            <Route exact path="/" component={Main} />
+            <Route exact path="/home" component={Main} />
+            <Route exact path="/products" component={Main} />
 
             {/* Product */}
-            <Route exact path="/app-react/products/:id" component={Product} />
+            <Route exact path="/products/:id" component={Product} />
 
             {/* Error */}
-            <Route exact path="/app-react/erro" component={Erro} />
             <Route component={Erro} />
         </Switch>
     </BrowserRouter>
